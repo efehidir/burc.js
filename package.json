@@ -4,7 +4,7 @@
   "description": "Girilen burç hakkında bilgiler verir.",
   "main": "app.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "echo \"No test specified\""
   },
   "repository": {
     "type": "git",
