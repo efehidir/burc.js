@@ -1,0 +1,22 @@
+{
+  "name": "burc.js",
+  "version": "1.0.0",
+  "description": "Girilen burç hakkında bilgiler verir.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efehidir/burcjs.git"
+  },
+  "keywords": [
+    "burcjs"
+  ],
+  "author": "hasefe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/efehidir/burcjs/issues"
+  },
+  "homepage": "https://github.com/efehidir/burcjs#readme"
+}
