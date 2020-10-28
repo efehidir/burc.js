@@ -1,5 +1,5 @@
 module.exports = {
-	version: "1.0.9"
+	version: "1.1.1"
 }
 module.exports.gunluk = async(burc) => {
 	const fetch = require('node-fetch');
@@ -86,13 +86,13 @@ news.forEach(a=>silAr.push(a.textContent))
 } else
 if (burc.toLowerCase() === "terazi") {
 let terazi = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/terazi-burcu/')
-	let terazi1 = await terazi.text()
-	  let dom = new JSDOM(oglak1)
+    let terazi1 = await terazi.text()
+      let dom = new JSDOM(terazi1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Terazi burcu bugün`);
        data.push(`${silAr[5]}`);
-	   
+       
     return data.join(",\n")
 } else
 if (burc.toLowerCase() === "akrep") {
