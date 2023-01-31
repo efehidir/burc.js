@@ -1,20 +1,20 @@
-module.exports = {
-	version: "1.1.1"
-}
-module.exports.gunluk = async(burc) => {
-	const fetch = require('node-fetch');
-const { JSDOM } = require('jsdom');
-	let data = []
-let silAr = []
+import fetch from 'node-fetch';
+import jsdom from 'jsdom';
+const { JSDOM } = jsdom;
 
+
+export async function gunluk(burc) {
+  let data = []
+  let silAr = []
+  
 if (burc.toLowerCase() === "oglak" || burc.toLowerCase() == "oğlak") {
 let oglak = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/oglak-burcu/')
 	let oglak1 = await oglak.text()
 	  let dom = new JSDOM(oglak1)
  let news = dom.window.document.querySelectorAll('p');
-news.forEach(a=>silAr.push(a.textContent))
+ news.forEach(a=>silAr.push(a.textContent))
        data.push(`Oğlak burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -25,7 +25,7 @@ let yengec = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/yengec-b
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Yengeç burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else 
@@ -36,7 +36,7 @@ let koc = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/koc-burcu/'
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Koç burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -47,7 +47,7 @@ let boga = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/boga-burcu
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Boğa burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -58,7 +58,7 @@ let ikizler = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/ikizler
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`İkizler burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -69,7 +69,7 @@ let aslan = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/aslan-bur
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Aslan burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 }
@@ -80,7 +80,7 @@ let basak = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/basak-bur
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Başak burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -91,7 +91,7 @@ let terazi = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/terazi-b
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Terazi burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
        
     return data.join(",\n")
 } else
@@ -102,7 +102,7 @@ let akrep = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/akrep-bur
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Akrep burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -113,7 +113,7 @@ let yay = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/yay-burcu/'
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Yay burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -124,7 +124,7 @@ let kova = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/kova-burcu
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Kova burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else
@@ -135,7 +135,7 @@ let balik = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/balik-bur
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
        data.push(`Balık burcu bugün`);
-       data.push(`${silAr[5]}`);
+       data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
 } else {

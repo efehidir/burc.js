@@ -1,6 +1,6 @@
 {
   "name": "burc.js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Girilen burç hakkında bilgiler verir.",
   "main": "app.js",
   "scripts": {
@@ -13,10 +13,15 @@
   "keywords": [
     "burcjs"
   ],
-  "author": "hasefe",
+  "author": "efehidir",
   "license": "MIT",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/efehidir/burcjs/issues"
   },
-  "homepage": "https://github.com/efehidir/burcjs#readme"
+  "homepage": "https://github.com/efehidir/burcjs#readme",
+  "dependencies": {
+    "jsdom": "^21.1.0",
+    "node-fetch": "^3.3.0"
+  }
 }
