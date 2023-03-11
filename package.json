@@ -1,6 +1,6 @@
 {
   "name": "burc.js",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Girilen burç hakkında bilgiler verir.",
   "main": "app.js",
   "scripts": {
@@ -15,7 +15,6 @@
   ],
   "author": "efehidir",
   "license": "MIT",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/efehidir/burcjs/issues"
   },

@@ -1,9 +1,7 @@
-import fetch from 'node-fetch';
-import jsdom from 'jsdom';
-const { JSDOM } = jsdom;
+const { JSDOM } = require("jsdom");
 
 
-export async function gunluk(burc) {
+module.exports.gunluk = async(burc) => {
   let data = []
   let silAr = []
   
@@ -13,7 +11,6 @@ let oglak = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/oglak-bur
 	  let dom = new JSDOM(oglak1)
  let news = dom.window.document.querySelectorAll('p');
  news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Oğlak burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -24,7 +21,6 @@ let yengec = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/yengec-b
 	  let dom = new JSDOM(yengec1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Yengeç burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -35,7 +31,6 @@ let koc = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/koc-burcu/'
 	  let dom = new JSDOM(koc1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Koç burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -46,7 +41,6 @@ let boga = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/boga-burcu
 	  let dom = new JSDOM(boga1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Boğa burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -57,7 +51,6 @@ let ikizler = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/ikizler
 	  let dom = new JSDOM(ikizler1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`İkizler burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -68,7 +61,6 @@ let aslan = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/aslan-bur
 	  let dom = new JSDOM(aslan1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Aslan burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -79,7 +71,6 @@ let basak = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/basak-bur
 	  let dom = new JSDOM(basak1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Başak burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -90,7 +81,6 @@ let terazi = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/terazi-b
       let dom = new JSDOM(terazi1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Terazi burcu bugün`);
        data.push(`${silAr[4]}`);
        
     return data.join(",\n")
@@ -101,7 +91,6 @@ let akrep = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/akrep-bur
 	  let dom = new JSDOM(akrep1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Akrep burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -112,7 +101,6 @@ let yay = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/yay-burcu/'
 	  let dom = new JSDOM(yay1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Yay burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -123,7 +111,6 @@ let kova = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/kova-burcu
 	  let dom = new JSDOM(kova1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Kova burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
@@ -134,7 +121,6 @@ let balik = await fetch('https://www.hurriyet.com.tr/mahmure/astroloji/balik-bur
 	  let dom = new JSDOM(balik1)
  let news = dom.window.document.querySelectorAll('p');
 news.forEach(a=>silAr.push(a.textContent))
-       data.push(`Balık burcu bugün`);
        data.push(`${silAr[4]}`);
 	   
     return data.join(",\n")
