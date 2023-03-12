@@ -1,5 +1,5 @@
 const { JSDOM } = require("jsdom");
-
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 module.exports.gunluk = async(burc) => {
   let data = []
